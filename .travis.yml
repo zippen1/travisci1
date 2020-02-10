@@ -10,3 +10,14 @@ install:
 
 script:
   - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: dist/
+  github_token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
+  keep_history: false
+  name: zippen1
+  email: 2836284560@qq.com
+  on:
+    branch: master
